@@ -265,4 +265,5 @@ def health_check():
 if __name__ == '__main__':
     print("🤖 AI-Based Workout and Diet Planning System - Flask API")
     print("Starting Flask server...")
-    app.run(debug=True, host='0.0.0.0', port=8000)
+    port = int(os.environ.get("PORT", 8000))
+    app.run(debug=False, host='0.0.0.0', port=port)
